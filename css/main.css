@@ -1,0 +1,25 @@
+/* 
+    Created on : Jan 27, 2015, 4:26:58 PM
+    Author     : Roberto Torres
+*/
+
+#game{
+    border: 2px solid blue;
+    width: 800px;
+    height: 600px;
+    background-color: #000;
+}
+
+body{
+    background-image: url("../assets/images/background-stars.jpg");
+    background-color: #000;
+    font-family: 'Signika', sans-serif;
+}
+
+.instrucciones{
+    color:whitesmoke;
+}
+
+.table-bg {
+   background-color: whitesmoke;
+}

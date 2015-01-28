@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>JuegosHTML5</title>
+        <link href="http://juegoshtml5.cl/core/img/favicon.ico" rel="icon" type="image/x-icon" />
+
+        <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+        <link href="http://juegoshtml5.cl/core/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="http://juegoshtml5.cl/core/css/freelancer.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="http://juegoshtml5.cl/core/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body id="page-top" class="index preload">
+        <!-- Preload -->
+        <div id="preload" style="position: fixed;top: 0;bottom: 0;left: 0;right: 0;background-color: #fff;z-index: 99999">
+            <script src="http://juegoshtml5.cl/core/js/spin.min.js"></script>
+            <div style="" id="spin"></div>
+            <script>
+                var opts = {lines: 15, length: 23, width: 10, radius: 31, corners: 1, rotate: 0, direction: 1, color: '#000', speed: 1, trail: 67, shadow: false, hwaccel: false, className: 'spinner', zIndex: 2e9, top: '50%', left: '50%'};
+                var target = document.getElementById('spin');
+                var spinner = new Spinner(opts).spin(target);
+            </script>
+        </div>
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#page-top">JuegosHTML5</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="#portfolio">Desarrollo</a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="#about">Nosotros</a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="#contact">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+
+        <!-- Header -->
+       
+        <!-- Portfolio Grid Section -->
+        <section id="portfolio" style="background-color: wheat">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>Desarrollo</h2>
+                        <hr class="star-wheat">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="http://juegoshtml5.cl/core/img/one_a.jpg" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="http://juegoshtml5.cl/core/img/two_a.jpg" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="http://juegoshtml5.cl/core/img/three_a.jpg" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="http://juegoshtml5.cl/core/img/four_a.jpg" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="http://juegoshtml5.cl/core/img/five_a.png" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="http://juegoshtml5.cl/core/img/six_a.png" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="http://juegoshtml5.cl/core/img/seven_a.png" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center">
+            <!--            <div class="footer-above">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="footer-col col-md-4">
+                                        <h3>Location</h3>
+                                        <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+                                    </div>
+                                    <div class="footer-col col-md-4">
+                                        <h3>Around the Web</h3>
+                                        <ul class="list-inline">
+                                            <li>
+                                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer-col col-md-4">
+                                        <h3>About Freelancer</h3>
+                                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+            <div class="footer-below">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            Copyright &copy; JuegosHTML5.cl 2014
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+        <div class="scroll-top page-scroll visible-xs visble-sm">
+            <a class="btn btn-primary" href="#page-top">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+
+        <!-- Portfolio Modals -->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>El juego</h2>
+                                <hr class="star-primary">
+                                <img src="http://juegoshtml5.cl/core/img/one_b.jpg" class="img-responsive img-centered" alt="">
+                                <p>Es de una trama muy simple, sólo intenta completar tu nave que está repartida por todo el nivel y te cuidado con las criaturas, que no sabemos que diablos sean, sólo las colocamos ahí XD, no se nos ocurrió mucho. </p>
+                                <h5>El personaje</h5>
+                                <p>El personaje es un marciano capaz de saltar muy alto e ir más rápido si mantienes apretado “shift”. Busca las pócimas que le permiten disparar lasers presionando “a”. Un aspecto muy importante es que éste marciano puede hacer el clásico salto ninja, chocas contra una pared en un sentido e inmediatamente, te mueves en el sentido contrario para saltar desde ella, por ejemplo, en las nubes esto es realmente útil.</p>
+                                <h5>Los enemigo</h5>
+                                <p>Estos personajes son muy simples, ya poseen dos tipos de movimientos donde unos te persiguen y los otros simplemente caminan y cambian su sentido al chocar con algo.</p>
+                                <h5>Los árboles</h5>
+                                <p>Éstos son bloques que pueden escalarse, donde también es posible saltar desde ellos. En el juego están representados gráficamente como un simple tronco. </p>
+                                <h5>La física</h5>
+                                <p>La física del juego es de plataformas, donde hay colisión completa con algunos objetos y con otros hay colisiones parciales. Por ejemplo, los bloques como piedras o cajas impiden el paso, pero las nubes nos permiten atravesarlas e impulsarnos a través de ellas por medio de saltos ninjas.</p>
+                                <ul class="list-inline item-details">
+                                    <li>Fecha:
+                                        <strong><a href="#">Enero 2015</a>
+                                        </strong>
+                                    </li>
+                                    <li>Equipo:
+                                        <strong><a href="#">JuegosHTML5.cl</a>
+                                        </strong>
+                                    </li>
+                                </ul>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>Tecnologías</h2>
+                                <hr class="star-primary">
+                                <img src="http://juegoshtml5.cl/core/img/two_b.jpg" class="img-responsive img-centered" alt="">
+                                <p>En nuestro caso nos limitamos a usar dos librerías de javascript que consideramos fantásticas, pero que no hacen todo el trabajo. Una de ellas es Jquery, donde su lema es hacer más escribiendo menos y la otra es Createjs, una excelente librería para facilitar el dibujo y la gestión de sonido dentro de la etiqueta Canvas. Con estas dos herramientas programamos los eventos de teclado y dibujamos y animamos el escenario en el que se desenvuelve el personaje.</p>
+                                <p>Con Jquery hemos programado los eventos de teclado y captado ciertas variables del DOM y Createjs nos ha permitido animar hojas de Sprite con mucha facilidad, además de controlar el sonido de una manera muy simple, sin embargo, toda la lógica del juego está desarrollada con Javascript, donde la utilización de Jsons nos ha ayudado a organizar muy bien la información. </p>
+                                <p>Las colisiones entre objetos y enemigos, la aceleración de la gravedad, el aplastar enemigos para acabar con ellos o dispararles y escuchar todo eso dentro de un loop infinito, ha sido puramente javascript.</p>
+                                <p>Hacer este trabajo sin la ayuda de motores, te permite comprender y valorar el enorme esfuerzo que antes se hizo para desarrollar juegos que marcaron nuestra infancia, donde no podías dibujar con alguna herramienta, o manipular las hojas de Sprite tan fácilmente, aquí todo era pixel a pixel. Intentarlo de esta manera, nos ayuda a pensar y buscar la manera de hacer una realidad propia, con sus propias reglas, con su física y terminas comprendiendo que la realidad misma es bastante compleja.</p>
+                                <ul class="list-inline item-details">
+                                    <li>Fecha:
+                                        <strong><a href="#">Enero 2015</a>
+                                        </strong>
+                                    </li>
+                                    <li>Equipo:
+                                        <strong><a href="#">JuegosHTML5.cl</a>
+                                        </strong>
+                                    </li>
+                                </ul>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>Hojas de Sprite</h2>
+                                <hr class="star-primary">
+                                <img src="http://juegoshtml5.cl/core/img/three_b.jpg" class="img-responsive img-centered" alt="">
+                                <p>La utilización de hojas de Sprite es muy importante, ya que en una sola hoja podemos cargar un juego completo. Un solo archivo de imágenes es capaz de contener todas las animaciones posibles de un personaje, evitando tener que llamar a una imagen distinta por cada cuadro de animación. </p>
+                                <img src="http://juegoshtml5.cl/core/img/three_c.jpg" class="img-responsive img-centered" alt="">
+                                <p>Una hoja de sprite sólo muestra una pequeña zona de ella, sólo una coordenada con un ancho y un alto que hace variar durante la animación de algún personaje. Lo hace rápido y de un modo similar al de una película de cine, dando así la sensación de movimiento. </p>
+                                <h5>PNG</h5>
+                                <img src="http://juegoshtml5.cl/core/img/three_d.jpg" class="img-responsive img-centered" alt="">
+                                <p>Las imágenes que utilizaremos para animar, con la técnica de sprite, deben poseer un fondo transparente, de este modo el personaje se verá como si estuviera en un lugar específico dentro del escenario. Las imágenes a utilizar con tales características, deben ser de extensión PNG.</p>
+                                <ul class="list-inline item-details">
+                                    <li>Fecha:
+                                        <strong><a href="#">Enero 2015</a>
+                                        </strong>
+                                    </li>
+                                    <li>Equipo:
+                                        <strong><a href="#">JuegosHTML5.cl</a>
+                                        </strong>
+                                    </li>
+                                </ul>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- jQuery -->
+        <script src="http://juegoshtml5.cl/core/js/jquery.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="http://juegoshtml5.cl/core/js/bootstrap.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="http://juegoshtml5.cl/core/js/classie.js"></script>
+        <script src="http://juegoshtml5.cl/core/js/cbpAnimatedHeader.js"></script>
+        <script src="http://juegoshtml5.cl/core/js/ndgmr.Collision.js"></script>
+
+        <!-- Contact Form JavaScript -->
+        <script src="http://juegoshtml5.cl/core/js/jqBootstrapValidation.js"></script>
+        <script src="http://juegoshtml5.cl/core/js/contact_me.js"></script>
+
+        <!-- CreateJS -->
+        <script src="//code.createjs.com/createjs-2014.12.12.min.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="http://juegoshtml5.cl/core/js/freelancer.js"></script>
+        <script src="http://juegoshtml5.cl/core/js/custom.js"></script>        
+
+        <script>
+                                    $(function() {
+                                        $("body").removeClass("preload");
+                                        $("#preload").fadeOut("slow");
+                                        $('#carousel-demos').carousel();
+                                        creaSonidos();
+
+                                        window.addEventListener('resize', resize, false);
+
+                                        resize();
+                                        comienzo();
+                                    });
+
+                                  
+        </script>
+
+       
+    </body>
+
+</html>
