@@ -4,14 +4,10 @@
 */
 
 #game{
-    border: 2px solid blue;
-    width: 800px;
-    height: 600px;
-    background-color: #000;
+    background-color: #000;  
 }
 
 body{
-    background-image: url("../assets/images/background-stars.jpg");
     background-color: #000;
     font-family: 'Signika', sans-serif;
 }

@@ -4,33 +4,35 @@
     <meta charset="UTF-8"/>
     <title>Zombie Tron</title>
     <link rel="stylesheet" href="./css/main.css"/>
-    <style type="text/css">
-    body{
-        background-color: #000;
-        font-family: 'Signika', sans-serif;
-    }
-    </style>
     <link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
 </head>
-<body style="background-color:#000;">
-    <br>    
-    <center>
-        <div id="game">
+<body>
 
-        </div>
-        <h2 class="instrucciones">Instrucciones</h2>
-        <h3 class="instrucciones">Para moverte debes apretar las flechas del teclado
-            <br>
-            Para disparar debes presionar W - A - S - D según la dirección.
-        </h3>
-    </center>
+    <div id="game">
+
+    </div>
+
+    
     <script src="./js/libs/phaser.js"></script>
     <script src="./js/libs/gamecontroller.min.js"></script>
     <script type="text/javascript">
 
+
+
+
     window.onload = function () {
+            //resolución
+            // get dimensions of the window considering retina displays
+            var winW = window.innerWidth-30 * window.devicePixelRatio,
+            winH = window.innerHeight-30 * window.devicePixelRatio;
+
+// simply pass them in
+//var game = new Phaser.Game(w, h, Phaser.AUTO, 'gameContainer'); 
+
+
+
             // variables del juego
-            var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game', {preload: preload, create: create, update: update, render: render});
+            var game = new Phaser.Game(winW, winH, Phaser.AUTO, 'game', {preload: preload, create: create, update: update, render: render});
             var trooper;
             var laser;
             var bulletTime = 0;
@@ -85,6 +87,7 @@
 
             function create() {
                 // control touch
+                //game.world.setBounds(-1000, -1000, 1024, 768);
                 GameController.init({
                     left: {
                         type: 'joystick',
@@ -144,9 +147,9 @@
 
                 for (var i = 0; i < max; i++)
                 {
-                    xx[i] = Math.floor(Math.random() * 1600) - 800;
-                    yy[i] = Math.floor(Math.random() * 1200) - 600;
-                    zz[i] = Math.floor(Math.random() * 1600) - 800;
+                    xx[i] = Math.floor(Math.random() * 1600) - winW;
+                    yy[i] = Math.floor(Math.random() * 1200) - winH;
+                    zz[i] = Math.floor(Math.random() * 1600) - 400;
 
                     var star = game.make.sprite(0, 0, 'star');
                     star.anchor.set(0.5);
@@ -218,9 +221,9 @@
                 // var x = game.world.randomX;
                 //var y = game.world.randomY;
                 for (var i = 0; i <= (level * 2); i++) {
-                    var x = Math.floor((Math.random() * 800) + 1);
+                    var x = Math.floor((Math.random() * winW) + 1);
                     ;
-                    var y = Math.floor((Math.random() * 600) + 1);
+                    var y = Math.floor((Math.random() * winH) + 1);
                     ;
                     var enemigo = enemies.create(x + i, y + i, 'mummy');
                     enemigo.anchor.setTo(0.5, 0.5);
@@ -233,9 +236,9 @@
                 }
                 if(level > 3){
                     for (var i = 0; i <= (level); i++) {
-                        var x = Math.floor((Math.random() * 800) + 1);
+                        var x = Math.floor((Math.random() * winW) + 1);
                         ;
-                        var y = Math.floor((Math.random() * 600) + 1);
+                        var y = Math.floor((Math.random() * winH) + 1);
                         ;
                         var enemigo = enemies.create(x + i, y + i, 'zombie');
                         enemigo.anchor.setTo(0.5, 0.5);
@@ -517,7 +520,7 @@
                 game.physics.arcade.overlap(trooper, enemyBullets, collisionTrooper, null, this);
                 game.physics.arcade.overlap(trooper, enemies, collisionEnemies, null, this);
                 // 
-               
+
 
             }
 
