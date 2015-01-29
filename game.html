@@ -4,6 +4,12 @@
     <meta charset="UTF-8"/>
     <title>Zombie Tron</title>
     <link rel="stylesheet" href="./css/main.css"/>
+    <style type="text/css">
+    body{
+        background-color: #000;
+        font-family: 'Signika', sans-serif;
+    }
+    </style>
     <link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
 </head>
 <body style="background-color:#000;">
@@ -226,7 +232,7 @@
                     // enemigo.body.moves = false;
                 }
                 if(level > 3){
-                    for (var i = 0; i <= (level * 2); i++) {
+                    for (var i = 0; i <= (level); i++) {
                         var x = Math.floor((Math.random() * 800) + 1);
                         ;
                         var y = Math.floor((Math.random() * 600) + 1);
@@ -511,16 +517,7 @@
                 game.physics.arcade.overlap(trooper, enemyBullets, collisionTrooper, null, this);
                 game.physics.arcade.overlap(trooper, enemies, collisionEnemies, null, this);
                 // 
-                if (enemies.length == 0) {
-                    trooper.kill();
-
-                    enemies.removeAll();
-                    cantidadEnemigos = 0;
-                    stateText.text = " GAME OVER \n ... el juego se reiniciará en breve";
-                    stateText.visible = true;
-                    levelAudio.pause();
-                    setTimeout(function(){restart();}, 3000);
-                }
+               
 
             }
 
@@ -562,7 +559,7 @@
 
                 if (live == 0) {
                     trooper.kill();
-
+                    cantidadEnemigos = 0;
                     enemies.removeAll();
                     stateText.text = " GAME OVER \n ... el juego se reiniciará en breve";
                     stateText.visible = true;
@@ -622,7 +619,7 @@
                 //  A new level starts
 
                 //resets the life count
-                live = 3;
+                live = 5;
                 level = 1;
                 puntaje = 0;
                 //  And brings the aliens back from the dead :)
