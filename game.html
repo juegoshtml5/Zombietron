@@ -539,10 +539,11 @@
                         trooper.kill();
 
                         //enemies.removeAll();
-                        stateText.text = " WIN ! \n Haz click para el \n siguiente nivel";
+                        stateText.text = " WIN ! \n El siguiente nivel\nse cargará en breve";
                         stateText.visible = true;
                         //the "click to restart" handler
-                        game.input.onTap.addOnce(nextLevel, this);
+                        setTimeout(function(){nextLevel();}, 3000);
+                        
 
                         // game.input.onDown.add(doSomething, this);
                     }
