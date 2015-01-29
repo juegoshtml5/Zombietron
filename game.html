@@ -1,13 +1,13 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Zombie Tron</title>
-        <link rel="stylesheet" href="./css/main.css"/>
-        <link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
-    </head>
-    <body>
-        <br>    
+<head>
+    <meta charset="UTF-8"/>
+    <title>Zombie Tron</title>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
+</head>
+<body style="background-color:#000;">
+    <br>    
     <center>
         <div id="game">
 
@@ -21,8 +21,8 @@
     <script src="./js/libs/phaser.js"></script>
     <script src="./js/libs/gamecontroller.min.js"></script>
     <script type="text/javascript">
-        
-        window.onload = function () {
+
+    window.onload = function () {
             // variables del juego
             var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game', {preload: preload, create: create, update: update, render: render});
             var trooper;
@@ -123,12 +123,12 @@
                  * 
                  * Estrellas (No importante)
                  */
-                levelAudio = game.add.audio('levelAudio');
-                levelAudio.play('', 0, 1, true);
-                shooter = game.add.audio('shooter');
+                 levelAudio = game.add.audio('levelAudio');
+                 levelAudio.play('', 0, 1, true);
+                 shooter = game.add.audio('shooter');
 
-                if (game.renderType === Phaser.WEBGL)
-                {
+                 if (game.renderType === Phaser.WEBGL)
+                 {
                     max = 100;
                 }
 
@@ -227,21 +227,21 @@
                 }
                 if(level > 3){
                     for (var i = 0; i <= (level * 2); i++) {
-                    var x = Math.floor((Math.random() * 800) + 1);
-                    ;
-                    var y = Math.floor((Math.random() * 600) + 1);
-                    ;
-                    var enemigo = enemies.create(x + i, y + i, 'zombie');
-                    enemigo.anchor.setTo(0.5, 0.5);
-                    enemigo.animations.add('fly', [0, 7, 13], 10, true);
-                    enemigo.play('fly');
-                    enemigo.lives = 6;
-                    enemigo.body.collideWorldBounds = true;
-                    cantidadEnemigos++;
+                        var x = Math.floor((Math.random() * 800) + 1);
+                        ;
+                        var y = Math.floor((Math.random() * 600) + 1);
+                        ;
+                        var enemigo = enemies.create(x + i, y + i, 'zombie');
+                        enemigo.anchor.setTo(0.5, 0.5);
+                        enemigo.animations.add('fly', [0, 7, 13], 10, true);
+                        enemigo.play('fly');
+                        enemigo.lives = 6;
+                        enemigo.body.collideWorldBounds = true;
+                        cantidadEnemigos++;
                     // enemigo.body.moves = false;
                 }
-                }
-                
+            }
+
                 // enemigo.x = 100;
                 //enemigo.y = 50;
 
@@ -516,11 +516,10 @@
 
                     enemies.removeAll();
                     cantidadEnemigos = 0;
-                    stateText.text = " GAME OVER \n Haz click para reiniciar";
-                    levelAudio.pause();
+                    stateText.text = " GAME OVER \n ... el juego se reiniciará en breve";
                     stateText.visible = true;
-                    //the "click to restart" handler
-                    game.input.onTap.addOnce(restart, this);
+                    levelAudio.pause();
+                    setTimeout(function(){restart();}, 3000);
                 }
 
             }
@@ -565,10 +564,11 @@
                     trooper.kill();
 
                     enemies.removeAll();
-                    stateText.text = " GAME OVER \n Haz click para reiniciar";
+                    stateText.text = " GAME OVER \n ... el juego se reiniciará en breve";
                     stateText.visible = true;
-                    //the "click to restart" handler
-                    game.input.onTap.addOnce(restart, this);
+                    levelAudio.pause();
+                    setTimeout(function(){restart();}, 3000);
+                    //game.input.onTap.addOnce(restart, this);
 
                 }
                 console.log(live);
@@ -589,21 +589,18 @@
 
                     enemies.removeAll();
                     cantidadEnemigos = 0;
-                    stateText.text = " GAME OVER \n Haz click para reiniciar";
-                    levelAudio.pause();
+                    stateText.text = " GAME OVER \n ... el juego se reiniciará en breve";
                     stateText.visible = true;
-                    //the "click to restart" handler
-                    game.input.onTap.addOnce(restart, this);
+                    setTimeout(function(){restart();}, 3000);
+                    levelAudio.pause();
+
 
                 } else if (cantidadEnemigos == 0) {
 
 
                     trooper.kill();
-
-                    //enemies.removeAll();
                     stateText.text = " WIN ! \n Haz click para el \n siguiente nivel";
                     stateText.visible = true;
-                    //the "click to restart" handler
                     game.input.onTap.addOnce(nextLevel, this);
 
                 }
@@ -672,42 +669,42 @@
                         bullet.reset(trooper.x, trooper.y);
                         switch (tipo) {
                             case "up":
-                                bullet.angle = 270;
-                                bullet.body.velocity.y = -400;
+                            bullet.angle = 270;
+                            bullet.body.velocity.y = -400;
 
-                                break;
+                            break;
                             case "down":
-                                bullet.angle = 90;
-                                bullet.body.velocity.y = 400;
-                                break;
+                            bullet.angle = 90;
+                            bullet.body.velocity.y = 400;
+                            break;
                             case "left":
-                                bullet.angle = 180;
-                                bullet.body.velocity.x = -400;
-                                break;
+                            bullet.angle = 180;
+                            bullet.body.velocity.x = -400;
+                            break;
                             case "right":
-                                bullet.angle = 0;
-                                bullet.body.velocity.x = 400;
-                                break;
+                            bullet.angle = 0;
+                            bullet.body.velocity.x = 400;
+                            break;
                             case "leftUp":
-                                bullet.angle = 225;
-                                bullet.body.velocity.x = -400;
-                                bullet.body.velocity.y = -400;
-                                break;
+                            bullet.angle = 225;
+                            bullet.body.velocity.x = -400;
+                            bullet.body.velocity.y = -400;
+                            break;
                             case "rightUp":
-                                bullet.angle = 315;
-                                bullet.body.velocity.x = 400;
-                                bullet.body.velocity.y = -400;
-                                break;
+                            bullet.angle = 315;
+                            bullet.body.velocity.x = 400;
+                            bullet.body.velocity.y = -400;
+                            break;
                             case "leftDown":
-                                bullet.angle = 135;
-                                bullet.body.velocity.x = -400;
-                                bullet.body.velocity.y = 400;
-                                break;
+                            bullet.angle = 135;
+                            bullet.body.velocity.x = -400;
+                            bullet.body.velocity.y = 400;
+                            break;
                             case "rightDown":
-                                bullet.angle = 45;
-                                bullet.body.velocity.x = 400;
-                                bullet.body.velocity.y = 400;
-                                break;
+                            bullet.angle = 45;
+                            bullet.body.velocity.x = 400;
+                            bullet.body.velocity.y = 400;
+                            break;
 
 
 
@@ -750,6 +747,6 @@
 
         };
 
-    </script>
-</body>
-</html>
+        </script>
+    </body>
+    </html>
