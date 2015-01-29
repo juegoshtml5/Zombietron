@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="UTF-8"/>
         <title>Zombie Tron</title>
         <link rel="stylesheet" href="./css/main.css"/>
         <link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
@@ -21,7 +21,7 @@
     <script src="./js/libs/phaser.js"></script>
     <script src="./js/libs/gamecontroller.min.js"></script>
     <script type="text/javascript">
-
+        
         window.onload = function () {
             // variables del juego
             var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game', {preload: preload, create: create, update: update, render: render});
@@ -507,10 +507,9 @@
                 }
 
                 //  Run collision
-                //game.physics.arcade.overlap(laser, enemies, collisionHandler, null, this);
-                //game.physics.arcade.overlap(trooper, enemyBullets, collisionTrooper, null, this);
-                //game.physics.arcade.overlap(trooper, enemies, collisionEnemies, null, this);
-                // game.physics.arcade.overlap(enemies, trooper, collisionEnemy, null, this
+                game.physics.arcade.overlap(laser, enemies, collisionHandler, null, this);
+                game.physics.arcade.overlap(trooper, enemyBullets, collisionTrooper, null, this);
+                game.physics.arcade.overlap(trooper, enemies, collisionEnemies, null, this);
                 // 
                 if (enemies.length == 0) {
                     trooper.kill();
